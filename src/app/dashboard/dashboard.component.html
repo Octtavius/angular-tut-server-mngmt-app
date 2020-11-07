@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+
+<div class="row">
+    <label for="addServerInput">Add server</label>
+    <input type="text" id="addServerInput" #serverName>
+    <button (click)="addServer(serverName.value)">Add Server</button>
+    <button (click)="backendCall()">Perform backend http call</button>
+</div>
+
+<hr>
+<app-server-list></app-server-list>

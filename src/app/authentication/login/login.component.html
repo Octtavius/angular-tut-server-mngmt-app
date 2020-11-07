@@ -1,0 +1,14 @@
+<form (submit)="onSubmit(signUpForm, emailInput)" #signUpForm="ngForm">
+    <input [(ngModel)]="name" type="text" name="name" placeholder="name">
+    <br>
+    <input #emailInput="ngModel" [(ngModel)]="email" type="text" name="email" placeholder="email" required>
+    <div [hidden]="emailInput.valid" class="error">
+        Email is required
+    </div>
+    <br>
+    <input [(ngModel)]="password" type="text" name="password" placeholder="password">
+    <br>
+    <br>
+
+    <input type="submit">
+</form>
